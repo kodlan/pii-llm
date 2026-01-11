@@ -1,0 +1,11 @@
+# Core dependencies for PII experiments
+datasets>=2.14.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# Jupyter notebook
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Optional: useful for data analysis
+pandas>=2.0.0
