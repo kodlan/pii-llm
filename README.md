@@ -15,7 +15,11 @@ pii-llm/
 
 ### Notebooks
 
-- **pii_data_experiments.ipynb**: Experiment notebook that loads the [ai4privacy/pii-masking-200k](https://huggingface.co/datasets/ai4privacy/pii-masking-200k) dataset, samples random entries, and tests OpenAI's GPT models for PII detection. Includes side-by-side comparison with ground truth annotations.
+- **pii_data_experiments.ipynb**: Experiment notebook that loads the [ai4privacy/pii-masking-200k](https://huggingface.co/datasets/ai4privacy/pii-masking-200k) dataset and benchmarks OpenAI models (GPT-4o-mini, GPT-5.2) for PII detection. Features:
+  - Zero-shot and few-shot learning prompt strategies
+  - Configurable number of few-shot examples
+  - Recall and precision metrics calculation
+  - Performance visualization across different few-shot configurations
 
 ## Getting Started
 
@@ -64,12 +68,13 @@ jupyter notebook notebooks/pii_data_experiments.ipynb
 ```
 
 The notebook will:
-1. Load the PII masking dataset from Hugging Face
-2. Sample 5 random (but reproducible) entries
-3. Display the original text and ground truth PII annotations
-4. Send samples to OpenAI for PII detection
-5. Compare OpenAI's results with ground truth annotations
-6. Provide summary statistics
+1. Load the PII masking dataset from Hugging Face (English samples only)
+2. Sample test entries and separate prompt examples for few-shot learning
+3. Display sample texts with ground truth PII annotations
+4. Test PII detection with multiple OpenAI models (GPT-4o-mini, GPT-5.2)
+5. Calculate recall and precision metrics for each model
+6. Run few-shot learning experiments with varying numbers of examples
+7. Plot performance graphs showing recall/precision vs number of few-shot examples
 
 ## License
 
